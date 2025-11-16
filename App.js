@@ -13,6 +13,11 @@ import ViewCompo from './View';
 import VirtualListCompo from './VirtualizedList';
 import SectionListCompo from './SectionList';
 import { ImageBackground } from 'react-native';
+import PressableComp from './Pressable';
+import KeyboardCompo from './KeyboardAvoiding';
+import ModalCompo from './Modal';
+
+
 
 export default function App() {
   return (
@@ -21,6 +26,7 @@ export default function App() {
       resizeMode="cover"
       style={styles.background}
     >
+
       <StatusBar barStyle="light-content" />
       <ScrollView contentContainerStyle={styles.scrollContainer}>
         <Text style={styles.title}>ActivityIndicator Component</Text>
@@ -34,6 +40,15 @@ export default function App() {
 
         <Text style={styles.title}>Image Component</Text>
         <DisplayImage />
+
+        <Text style={styles.title}>KeyboardAvoiding Component</Text>
+        <KeyboardCompo />
+
+        <Text style={styles.title}>Modal Component</Text>
+        <ModalCompo />
+
+        <Text style={styles.title}>Pressable Component</Text>
+        <PressableComp />
 
         <Text style={styles.title}>SectionList Component</Text>
         <SectionListCompo />
